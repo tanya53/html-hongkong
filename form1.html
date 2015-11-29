@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- the input and label enlarge when hover over, the image loads from the selected file -->
+<!-- example of form, required fields, default setting, radio buttons, check boxes, text areas, sliders -->
+<!-- sizes are set, not set up to resize depending on browser size -->
+<html lang="en">
+<head>
+<meta charset = "UTF-8">
+<meta name="Tanya" content ="first hong-kong html assignment">
+<title>assign. 1</title>
+<style>
+  fieldset {
+            background-color:#ffffcc;
+            border: 10px solid #ffff00;
+            margin-bottom:10px;
+            width:720px;
+            }
+  #address {width:360px;
+            height:50px;}
+            
+  label {width:180px;
+  	     padding-left : 20%;
+  	     display:inline-block;
+  	     text-align:right;
+  	     vertical-align:top;}
+
+  input:hover {font-size:150%;}
+  label:hover {font-size:150%;}
+  span:hover {font-size:150%;}
+  .gender {width:auto;
+           padding-left:0px;}
+  .checkbox {width:auto;
+             padding-left:0px;}
+  input[type="submit"] {margin-top:1%;}
+  .colorlow {background-color:#990000}
+  .colorhigh{background-color:#9900cc;}
+  img {width:25%; height:auto;}
+</style>
+
+</head>
+<body>
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="POST">
+<fieldset>
+     <!-- lets you select file and the bottom link of java code loads the file onto the form -->
+	<legend>Your Face</legend>
+	<label for="avatar">Your image</label>
+	<input type="file" id="avatar" name="avatar" required ><br>
+	<label for="preview">Image preview:</label><img  id="preview">
+
+	
+</fieldset>
+<fieldset>
+	<legend>Your General Details</legend>
+	<label for="name">Name:</label>
+	<input type="text" id="name" filename="name" placeholder="Enter full name" required><br>
+	<!-- radio button or -->
+	<label>Gender:</label><input type="radio" name="gender" value="male"><label class = "gender" for ="gender">Male</label>
+	<input type="radio" name="gender"value="female" checked="checked"><label class="gender" for="gender">Female</label><br>
+
+
+	<label for="age" >Age:</label>
+	<input type="number" min="0" max="99" step="1" value="18"
+	       id="age" name="age" required><br>
+ 	<label for="birthdate">Date of Birth:</label>
+ 	<input type="date" id="birthday" name="birthday"><br>
+ 	<label for="color">Favorite color:</label>
+ 	<input type="color" id="color" name="color"><br>
+ 	<!-- select from drop down menu -->
+ 	<label for = "country" >Which country:</label>
+ 	<input type="text" id="country" name="country" list="country_list"/><br>
+ 	<datalist id="country_list">
+ 		<option value="England">
+ 		<option value="India">
+ 		<option value="Iran">
+ 		<option value="China">
+ 		<option value="USA">
+ 		<option value="no selection">
+ 	</datalist>
+</fieldset>
+<fieldset>
+    <!-- sliders -->
+	<legend>Your indicators</legend>
+	<label for="height">Height:</label>
+	<span class="colorlow">Short</span><input type="range" min="0" max="100" step="1" value="50"
+	      id="height" name="salary"><span class="colorhigh">Tall</span><br>
+	<label for="salary">Salary:</label>
+	<span class="colorlow">Poor</span><input type="range" min="0" max="100" step="5" value="50"
+		   id="salary" name="salary"><span class="colorhigh">Rich</span><br>
+</fieldset>
+<fieldset>
+    <!-- texbarea -->
+	<legend>Your Contact Information</legend>
+	<label for="email">Email:</label>
+	<input type="email" id="email" name="email" required><br>
+	<label for="phone">Mobile:</label>
+	<input type="tel" id="phone" name="phone"><br>
+    <label for ="address">Address:</label>
+    <textarea name="address" id="address" cols="40" rows="6"></textarea>
+    <!-- checkboxes -->
+    <label>Method to contact you:</label>
+    <input type="checkbox" name="email" value="email"><label class="checkbox" for="email">email</label>
+    <input type="checkbox" name="whatsapp" value="whatsapp"><label class="checkbox" for ="whatsapp">Whatsapp</label>
+    <input type="checkbox" name="chat" value="chat""><label class="checkbox" for="chat">In-app chat</label>
+</fieldset>
+
+
+	<input type="submit" value="Submit!">
+</form>
+<!-- java script to load image -->
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>
+
+    
