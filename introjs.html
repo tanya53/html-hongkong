@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset = "UTF-8">
+<meta name="Tanya" content ="first hong-kong html assignment">
+<title>intro.js</title>
+<script>
+  	function do_something(){
+ 			 	alert('Hello there');
+				alert('We start soon ');
+				prompt('Are you excited?')
+				}
+</script>
+</head>
+<!--<body>
+<script>/* three simple functions are below */ </script>
+
+<script> alert("Welcome peeps!");</script>
+
+<script>confirm("are you ready yet?");</script>
+
+<script>
+	var user_name;//create variable
+	user_name=prompt('what is your name');
+	document.write("Welcome to my page " + user_name + "!");
+</script>
+
+<script>
+	alert('"John" is type: '+typeof"John" + "\n\n" +
+		"3.14 is type: " + typeof 3.14 + "\n\n" +
+		"false is type: " + typeof false);
+</script> 
+<body onload = "do_something()">
+	<p>
+		A message is showing as the page is loading
+	</p>
+-->
+<body onload="check_user_age()">
+	<h1> this is my nice home page </h1>
+	<script>
+		function check_user_age(){
+			if (age_of_user() <18)
+				alert("you are too young")
+			}
+		function age_of_user(){
+			var age_text, age;
+			age_text=prompt("What is your age? ");
+			age=parseInt(age_text);
+			return age;
+			}
+	</script>
+	<script>
+		alert("it's my " + build_great(5) + "grandmother");
+		function build_great(depth){
+			if (depth > 0)
+				return "great " + build_great(depth-1);
+			else
+				return "";
+			}
+	</script>
+<!-- switch statement
+	switch(variable_name){
+		case "option_1": do_something;
+						 break; - need so quits doing the other tests
+		case "option_n" : do_somthing;
+						  break;
+		default: do_something();
+		
+		
+		while (condition) {};
+		
+		do {
+		} while(condition) - does the loop once, upside down while loop
+		
+		
+-->
+<script>
+var pets = ["Dog","Cat","Rabbit"];
+alert(pets.join(" and "));
+alert(pets.join());
+alert(pets.length);
+pets.push("Hamster");
+// pets.unshift("Hamster"); - adds at the front of list
+// pets.pop() - off end
+// pets.shift(); - off the front
+// array1.concat(array2);
+</script>
+		
+		
+</body>
+</html>
