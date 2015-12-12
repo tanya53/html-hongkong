@@ -1,0 +1,26 @@
+<!--<html><body><script>
+function good_choice(){alert("good choice!");}
+function bad_choice(){alert("I don't agree");}
+</script>
+<h1>Click on the best social network ..</h1>
+<img src="facebook_icon.png" onclick="bad_choice()">
+<img src="google_pous_icon.png" onclick="bad_choice">
+<img src="twitter_icon.png"onclick="good_choice()">
+</body>
+</html>
+-->
+<html><body><script>
+function change_colour(new_colour){
+  document.getElementById("myDiv").style.background=new_colour;
+  }
+</script>
+<div id="myDiv"
+style="position:absolute;background:yellow;
+left:300;top:100;width:100;"
+onmouseover="change_colour('red');"
+onmouseout="change_colour('yellow');">
+Move your mouse over this are and then move
+it out ...
+</div>
+</body>
+</html>

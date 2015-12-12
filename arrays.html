@@ -1,0 +1,38 @@
+<!--
+
+pets.sort();
+pets.reverse();
+pets.sort().reverse();
+alert(pets.indexOf("Rabbit");
+array.indexOf(target,startPosition);
+pets.lastIndesOf("Rabbit");
+pets.slice(1); takes 1 onwards
+pets.slice(1,3); takes 1 and 2
+pets.splice(1,1); removed the thing from original array
+pets.splice(1,1,"Rabbit","Fish"); remove what at one with rabbit and fish
+
+pets.forEach(alert);
+
+
+function forEach(theArray,fn){
+  for(var i= 0;i <theArray.length;i++){
+    fn(theArray[i],i,theArray);
+    }
+ }
+   
+<script>
+  var numbers = [1,2,3,4,5];
+  numbers.forEach(function,(elem, idx,arr){
+    arr[idx]=elem*elem;
+    });
+    alert(numbers); //shows [1,4,9,16,25] 
+</script>
+function yourFunction(element,index,array);
+
+<script>
+  var square = function(el) {return el * el;}
+  var numbers = [1,2,3,4,5];
+  var results = numbers.map(square);
+  alert(results); // This shows [1,4,9,16,25]
+  </script>
+

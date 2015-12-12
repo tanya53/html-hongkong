@@ -1,0 +1,88 @@
+<!--
+<html><head><script>
+  function do_something() {alert("Page has loaded");}
+</script></head>
+<body onload ="do_something()">
+</body>
+</html>
+-->
+
+<!-- adding a handler using javascript -->
+<!-- <html><body id="theBody">
+  <script>
+    function do_something() {alert ("Page has loaded");}
+    window.onload = do_something;
+ </script>
+</body>
+</html> -->
+
+<!-- another way -->
+<!-- <html><body>
+  <script>
+    function do_something() {alert("Page has loaded ");}
+    window.addEventListener("load", do_something);
+  </script>
+</body></html> -->
+
+<!--<html><body>
+  <script>
+    function do_something() {alert("Page has loaded ");}
+    function do_something1() {alert("Page has loaded 1");}
+    function do_something2() {alert("Page has loaded");}
+    window.addEventListener("load", do_something);
+    window.addEventListener("load", do_something1);
+    window.addEventListener("load", do_something2);
+  </script>
+</body></html> -->
+
+<!-- remove event handler
+var theBody = document.getElementById("theBody");
+theBody.removeEventListener("load",do_something);-->
+<!--
+<html><body>
+  <button id="btn0" onclick=" alert('Hello!')">
+    Click me!</button><br>
+  <button id="btn1"> Remove Listener</button>
+  <script>
+    function do_something(){alert('Clicked');}
+    var btn0 = document.getElementById("btn0");
+    btn0.addEventListener("click",do_something);
+    
+    var btn1 = document.getElementById("btn1");
+    btn1.addEventListener("click", function(){
+      btn0.removeEventListener("click", do_something);
+      });
+</script></body></html>
+-->
+
+<!doctype html>
+<html>
+<body>
+   <button id="btn1">Click me</button>
+   <script>
+      var count = 0;
+      function countClick() {
+         count++;
+      }
+
+      function handler1() {
+         alert("Handler 1 has been triggered " + count + " times!");
+      }
+
+      function handler2() {
+         alert("Handler 2 has been triggered " + count + " times!");
+         if(count == 3) {
+            btn1.removeEventListener("click", handler1);
+         }
+      }
+
+      var btn1 = document.getElementById("btn1");
+      btn1.addEventListener("click", countClick);
+      btn1.addEventListener("click", handler1);
+      btn1.addEventListener("click", handler2);
+   </script>
+</body>
+</html>
+
+
+

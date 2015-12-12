@@ -1,0 +1,13 @@
+body{margin:0;
+     padding:0;
+     }
+.head {margin-left:5%;}
+div {position:absolute;
+     width:500px;
+     height:500px;
+     }
+
+#rightSide {left:500px;
+            border-left: 1px solid black;
+           }
+img {position:absolute;}
